@@ -8,7 +8,7 @@
 
 | 📄 Content               | 🔗 Link                                                                 |
 | -------------------------|------------------------------------------------------------------------|
-| 🔴 Live Link             | [click here](github.com/sahil-1610)                          |
+| 🔴 Live Link             | [click here](https://play-tube-ten.vercel.app/)                          |
 | 📈 Model                 | [click here](https://app.eraser.io/workspace/cATefMPkrAdzR9c6teox?origin=share) |
 
 ## 🚀 Features
