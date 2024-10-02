@@ -91,8 +91,6 @@
 
 // export default Login;
 
-
-
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useForm } from "react-hook-form";
@@ -122,7 +120,9 @@ function Login() {
     const isEmail = !data.username.startsWith("@");
 
     if (isEmail) {
-      let isValidEmail = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(data.username);
+      let isValidEmail = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(
+        data.username
+      );
       if (!isValidEmail) {
         toast.error("Please enter valid email id");
         return;
@@ -154,13 +154,13 @@ function Login() {
           className="mx-auto mt-4 flex w-full max-w-sm flex-col px-4"
         >
           <Input
-            label="Username or Email address"
+            label="Email address"
             required
             placeholder="use @ for username"
             {...register("username", { required: true })}
           />
           {errors.username?.type === "required" && (
-            <span className="text-red-500 mt-1">*username or email is required</span>
+            <span className="text-red-500 mt-1">*email is required</span>
           )}
           <div className="relative">
             <Input
@@ -192,7 +192,10 @@ function Login() {
         </form>
         <h6 className="mx-auto text-md mt-4">
           Don't have an Account yet?{" "}
-          <Link to={"/signup"} className="font-semibold text-blue-600 hover:text-blue-400">
+          <Link
+            to={"/signup"}
+            className="font-semibold text-blue-600 hover:text-blue-400"
+          >
             Sign up now
           </Link>
         </h6>
